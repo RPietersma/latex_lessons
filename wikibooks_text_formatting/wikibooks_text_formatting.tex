@@ -1,0 +1,74 @@
+% practicing text formatting with latex
+\documentclass{article}
+\usepackage{setspace}
+\usepackage[english, french]{babel}
+\usepackage{blindtext}
+\usepackage{csquotes}
+\usepackage[T1]{fontenc}
+\onehalfspacing
+\begin{document}
+
+
+Hello world!
+
+A `single' quote.
+
+Another ``quote.''
+
+A
+\foreignquote{french}{French language}
+quote.
+
+Wombat\textsubscript{walzing}
+
+Michelangelo was born on March 6\textsuperscript{th}, 1475.
+
+
+% dashes and hyphens
+Hyphen: daughter-in-law, X-rated\\
+En dash: pages 13--67\\
+Em dash: yes---or no? \\
+Minus sign: $0$, $1$ and $-1$
+
+%use \ldots for ellipsis
+New York, Tokyo, Budapest, \ldots
+
+
+
+\begin{doublespace}
+  This paragraph has double line spacing.
+  There is so much space between the lines.
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean suscipit tincidunt magna ac sollicitudin. Duis ac purus sodales, rutrum tortor vel, bibendum mi. Ut auctor vel eros ac scelerisque. Sed vitae tempor ante, sit amet sodales diam. Morbi aliquam, metus a convallis malesuada, purus mi placerat erat, id ornare eros nulla non est. Morbi sit amet enim accumsan, tempus tortor ut, venenatis nisl. Integer eget lectus ultricies, imperdiet ligula ut, fermentum metus.
+\end{doublespace}
+
+This paragraph has regular spacing.
+
+\begin{spacing}{2.5}
+  This paragraph has \\ huge gaps \\ between lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean suscipit tincidunt magna ac sollicitudin. Duis ac purus sodales, rutrum tortor vel, bibendum mi. Ut auctor vel eros ac scelerisque. Sed vitae tempor ante, sit amet sodales diam. Morbi aliquam, metus a convallis malesuada, purus mi placerat erat, id ornare eros nulla non est. Morbi sit amet enim accumsan, tempus tortor ut, venenatis nisl. Integer eget lectus ultricies, imperdiet ligula ut, fermentum metus.
+
+  Look at all of this space.
+\end{spacing}
+
+Use a tilda for non-breaking spaces, like this: Georges~-Antoine.
+
+\begin{minipage}{2in}
+I think this is: su\-per\-cal\-%
+i\-frag\-i\-lis\-tic\-ex\-pi\-%
+al\-i\-do\-cious
+\end{minipage}
+
+\Large Not shelfful\\
+but shelf{}ful
+
+
+\blindtext %lorem ipsum
+\Blindtext
+
+\frenchspacing
+To get a straight right margin in the output, LaTeX inserts varying amounts of space between the words. By default, it also inserts slightly more space at the end of a sentence. However, the extra space added at the end of sentences is generally considered typographically old-fashioned in English language printing. (The practice is found in nineteenth century design and in twentieth century typewriter styles.) Most modern typesetters treat the end of sentence space the same as the interword space. (See for example, Bringhurst's Elements of Typographic Style.)
+\nonfrenchspacing
+
+
+
+\end{document}
